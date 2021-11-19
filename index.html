@@ -1,39 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Interactive pricing component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
+  <img class="circles"
+    src="https://raw.githubusercontent.com/zaklinaradivojevic/interactive-component/64b5860ad5665fc69db18ff1935c0089f3233296/images/pattern-circles.svg"
+    alt="circles">
+  <h1 class="title">Simple, traffic-based pricing</h1>
+  <h2 class="subtitle">Sign-up for our 30-day trial. No credit card required.</h2>
+  <div class="card_box">
+    <p class="pageviews-number" id="pageviews-number"></p>
+    <p class="pageviews"><span id="pageviews">100 K</span>Pageviews</p>
+    <div class="month-year-number">
+      <p class="dolar">$</p>
+      <p id="slider-value"> 0</p>
+      <p class="month-year" id="month-year"> /month</p>
+    </div>
+    <div class="container">
+      <input type="range" id="my-slider" min="0" max="100" value="50" oninput="slider()">
 
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
-
-  Pageviews
-  $ /month
-
-  Monthly Billing
-  Yearly Billing 25% discount
-
-  Unlimited websites
-  100% data ownership
-  Email reports
-
-  Start my trial
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <div class="billing">
+      <h1 class="montly-billing">Monthly Billing</h1>
+      <span class="toggle-bg">
+        <input type="radio" name="toggle" value="off" onclick="montly()">
+        <input type="radio" name="toggle" value="on" onclick="yearly()">
+        <span class="switch"></span>
+      </span>
+      <h2 class="yearly-billing">Yearly Billing</h2>
+      <p class="discount">25% discount</p>
+    </div>
+    <div class="billing-desc">
+      <div class="desc">
+        <img class="checked"
+          src="https://raw.githubusercontent.com/zaklinaradivojevic/interactive-component/64b5860ad5665fc69db18ff1935c0089f3233296/images/icon-check.svg"
+          alt="checked">
+        <p>Unlimited websites</p>
+        <img class="checked"
+          src="https://raw.githubusercontent.com/zaklinaradivojevic/interactive-component/64b5860ad5665fc69db18ff1935c0089f3233296/images/icon-check.svg"
+          alt="checked">
+        <p>100% data ownership</p>
+        <img class="checked"
+          src="https://raw.githubusercontent.com/zaklinaradivojevic/interactive-component/64b5860ad5665fc69db18ff1935c0089f3233296/images/icon-check.svg"
+          alt="checked">
+        <p>Email reports</p>
+      </div>
+      <button class="start_trial">
+        Start my trial
+      </button>
+    </div>
   </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Zaklina Radivojevic</a>.
+  </div>
+  <script src="index.js"></script>
 </body>
+
 </html>
