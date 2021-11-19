@@ -164,7 +164,7 @@ font-size: 2em;
     display:block;
   }
   .toggle-bg{
-    background-color: hsl(174, 86%, 45%);
+    background-color: rgb(231, 230, 230);
     border-radius: 8px;
     box-shadow: 0 1px 0 #fff, inset 0 0 2px #d7dee3, inset 0 1px 0 #d7dee3, inset 0 1px 5px #d7dee3;
     display: block; 
@@ -469,7 +469,7 @@ input[type="range"]::-webkit-slider-thumb {
         display:block;
       }
       .toggle-bg{
-        background-color: hsl(174, 86%, 45%);
+        background-color: rgb(231, 230, 230);
         border-radius: 8px;
         box-shadow: 0 1px 0 #fff, inset 0 0 2px #d7dee3, inset 0 1px 0 #d7dee3, inset 0 1px 5px #d7dee3;
         display: block; 
